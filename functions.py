@@ -50,7 +50,13 @@ def product(*nums):
         product *= num
     return product
 
-print(product(2,2,4))
+# print(product(2,2,4))
+
+
+
+
+
+
 
 
 
@@ -106,8 +112,10 @@ print(product(2,2,4))
 #args puts arguments into a tuple
 #kwargs puts arguments into a dictionary
 
-# def dev_skills(dev_name, **kwargs):
-#     print(kwargs)
-#     dev = {'name': dev_name, 'skills': {}}
+def dev_skills(dev_name, **kwargs):
+    dev = {'name': dev_name, 'skills': {}}
+    for skill, rating in kwargs.items():
+        dev['skills'][skill] = rating
+    return dev
 
-# dev_skills('jimmy', html=5, css='string')
+# print(dev_skills('jimmy', html=5, css=2))
